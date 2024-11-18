@@ -11,6 +11,8 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+app.use(cors({ origin: 'https://expense-tracker-frontend-omega-two.vercel.app' }));
+
 // Routes
 app.use('/api/transactions', require('./routes/transactions'));
 
